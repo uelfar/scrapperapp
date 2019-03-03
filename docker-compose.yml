@@ -1,0 +1,13 @@
+version: "3"
+services:
+        webserver:
+                image: nginx
+                volumes:
+                        - /tmp/sharedv:/usr/share/nginx/html
+                ports:
+                        - 9091:80
+        myscrapper:
+                #build: ./scrapper
+                image: uelfar/myscrapper
+                volumes:
+                        - /tmp/sharedv/:/tmp/myres/
