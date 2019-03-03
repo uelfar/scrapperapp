@@ -7,7 +7,6 @@ services:
                 ports:
                         - 9091:80
         myscrapper:
-                #build: ./scrapper
-                image: uelfar/myscrapper
+                build: ./scrapper
                 volumes:
                         - /tmp/sharedv/:/tmp/myres/
